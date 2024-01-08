@@ -2,7 +2,7 @@
   "name": "weather-bot-admin-panel",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://telebotclient-5ouk.onrender.com/",
+  "proxy": "https://telebotserv.onrender.com/",
   "homepage": "https://telebotclient-5ouk.onrender.com/",
 
   "dependencies": {
