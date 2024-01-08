@@ -30,7 +30,7 @@ function App() {
 
   const fetchApiKey = () => {
   
-    axios.get('/admin/api-key')
+    axios.get('https://telebotserv.onrender.com/admin/api-key')
       .then((response) => {
         setApiKey(response.data);
       })
@@ -43,7 +43,7 @@ function App() {
     
     const newApiKey = prompt('Enter the new API key:');
     if (newApiKey) {
-      axios.post('/admin/api-key', { key: newApiKey })
+      axios.post('https://telebotserv.onrender.com/admin/api-key', { key: newApiKey })
         .then((response) => {
           alert(response.data);
           fetchApiKey(); // Refresh the API key after update
@@ -56,7 +56,7 @@ function App() {
 
   const deleteUser = (chatId) => {
    
-    axios.delete(`/users/${chatId}`)
+    axios.delete(`https://telebotserv.onrender.com/users/${chatId}`)
       .then((response) => {
         alert(response.data.message);
         fetchUsers(); // Refresh the user list after deletion
@@ -68,7 +68,7 @@ function App() {
 
   const fetchUsers = () => {
     
-    axios.get('/users')
+    axios.get('https://telebotserv.onrender.com/users')
       .then((response) => {
         setUsers(response.data);
       })
